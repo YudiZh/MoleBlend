@@ -1,0 +1,21 @@
+# config.yaml
+program: train.py
+method: bayes
+name: tox21_sweep
+metric:
+  goal: maximize
+  name: test/roc_auc
+parameters:
+  batch_size: 
+    values: [32,64,128,256]
+  lr:
+    max: 0.0001
+    min: 0.000001
+  max_epoch:
+    values: [40, 60, 80, 100]
+  weight_decay:
+    max: 0.001
+    min: 0.0000001
+command:
+  - bash
+  - shells/finetune/finetune-molnet-tox21.sh
