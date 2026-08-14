@@ -1,3 +1,5 @@
+
+
 # Multimodal Molecular Pretraining via Modality Blending
 
 This repository contains a Pytorch  implementation of the paper [Multimodal Molecular Pretraining via Modality Blending](https://arxiv.org/abs/2307.06235) (ICLR 2024).
@@ -53,6 +55,7 @@ You can download the dataset by referring to [Uni-Mol Datasets](https://github.c
 The following is an example of fine-tuning on the toxcast task.
 
 ```shell
+conda activate MOLEBLEND
 export count=30
 export data="./data/molecular_property_prediction" # path to moleculenet data
 export pretrain_ckpt_file="pretrained_ckpt.pt" # path to pretrained checkpoints
